@@ -1,5 +1,4 @@
 ﻿using StudentSystem;
-using System;
 
 namespace SchoolSystem
 {
@@ -8,31 +7,41 @@ namespace SchoolSystem
         static void Main(string[] args)
         {
 
-            // Create students
+            // Create students objects
             Student s1 = new Student("Andreas", 27);
-            Student s2 = new Student("Emmerence", 28);
-            Student s3 = new Student("Oesten", 28);
+            Student s2 = new Student("Anika", 25);
+            Student s3 = new Student("Emmerence", 28);
             Student s4 = new Student("Kristoffer", 33);
-            Student s5 = new Student("Anika", 25);
+            Student s5 = new Student("Oesten", 28);
+
+            // Add student object to list
+            List<Student> students = new List<Student>
+            {
+                s1,
+                s2,
+                s3,
+                s4,
+                s5
+            };
 
             // Create a course 
             Course c1 = new Course("Programming 101");
 
             // Add students to the course
-            c1.AddStudent(s1);
-            c1.AddStudent(s2);
-            c1.AddStudent(s3);
-            c1.AddStudent(s4);
-            c1.AddStudent(s5);
+            foreach (Student student in students)
+            {
+                c1.AddStudent(student);
+            }
+
 
             // Print students in the course
             c1.PrintStudents();
 
-            Console.WriteLine("Students over 27 years old:");
+            Console.WriteLine("\nStudents over 27 years old:");
 
             foreach (Student student in c1.Students)
             {
-                if (student.Age > 27)
+                if (student.Age >= 28)
                 {
                     student.PrintInfo();
                 }

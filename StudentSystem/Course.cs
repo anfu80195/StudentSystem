@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace StudentSystem
+﻿namespace StudentSystem
 {
     public class Course
     {
@@ -10,7 +6,7 @@ namespace StudentSystem
         public string Name { get; set; }
         public List<Student> Students { get; set; }
 
-        
+
         // Constructor to initialize the course object
         public Course(string name)
         {
