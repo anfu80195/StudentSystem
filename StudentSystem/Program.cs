@@ -26,18 +26,25 @@ namespace SchoolSystem
 
             // Create a course 
             Course c1 = new Course("Programming 101");
+            Course c2 = new Course("System Development 28+");
 
             // Add students to the course
             foreach (Student student in students)
             {
                 c1.AddStudent(student);
+
+                if (student.Age >= 28)
+                {
+                    c2.AddStudent(student);
+                }
             }
 
-
-            // Print students in the course
+            // Print students for both courses
             c1.PrintStudents();
+            Console.WriteLine();
+            c2.PrintStudents();
 
-            Console.WriteLine("\nStudents over 27 years old:");
+            /*Console.WriteLine("\nStudents over 27 years old:");
 
             foreach (Student student in c1.Students)
             {
@@ -45,9 +52,7 @@ namespace SchoolSystem
                 {
                     student.PrintInfo();
                 }
-
-
-            }
+            }*/
         }
     }
 }
