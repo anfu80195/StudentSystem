@@ -6,22 +6,14 @@ namespace SchoolSystem
     {
         static void Main(string[] args)
         {
-
-            // Create students objects
-            Student s1 = new Student("Andreas", 27);
-            Student s2 = new Student("Anika", 25);
-            Student s3 = new Student("Emmerence", 28);
-            Student s4 = new Student("Kristoffer", 33);
-            Student s5 = new Student("Oesten", 28);
-
-            // Add student object to list
+            // Create student objects and add inside list
             List<Student> students = new List<Student>
             {
-                s1,
-                s2,
-                s3,
-                s4,
-                s5
+                new Student("Andreas", 27),
+                new Student("Anika", 25),
+                new Student("Emmerence", 28),
+                new Student("Kristoffer", 33),
+                new Student("Østen", 28),
             };
 
             // Create a course 
